@@ -22,7 +22,7 @@ int main() {
             f=i;
             while (f<n and A[f][i]==0)
                 f++;
-            for (int j=i;j<n+1;j++)
+            for (int j=0;j<n+1;j++)
             {
                 x[j]=A[i][j];
                 A[i][j]=A[f][j];
