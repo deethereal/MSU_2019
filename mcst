@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int add(int a, int b)
+{
+return a+b;
+}
+int dep(int a, int b)
+{
+return a-b;
+}
+int mul(int a, int b)
+{
+return a*b;
+}
+int div(int a, int b)
+{
+return a/b;
+}
+int main()
+{    
+int rez,a,b,num,temp,i=0,j=0;
+char c;
+int *numers;
+char *operations;
+while (scanf("%c",&c)!='^D')
+{
+    num = c;
+    if(num>=48 && num<=57){
+    while (num>=48 && num<=57)
+    {
+        temp=temp*10+int(c);
+        scanf("%c",&c);
+        num=c
+    }
+    numers=(int*)realloc(
+    numers[i]=temp;
+    temp=0;
+    i++;
+    }
+    else
+        if (c!=' '){
+            operations[j]=c;
+            j++;
+        }
+    
+    for (int f=0;f<=j;f++){
+        
+    
+        if (
+            
+            }
+switch (c)
+{
+ case '+':
+	rez=add(a,b);
+	break;
+ case '-':
+        rez=dep(a,b);
+        break;
+ case '*':
+        rez=mul(a,b);
+        break;
+ case '/':
+        rez=div(a,b);
+        break;
+}
+printf("%d\n",rez);
+}
+    return 0;
+}
