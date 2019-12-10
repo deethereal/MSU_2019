@@ -18,7 +18,7 @@ struct node{
     int count=0;
 };
 
-node *stump(int value)
+node *stump(int value)  //cоздание верхушки дерева
 {
     node *temp = new node();
     temp->data=value;
@@ -29,7 +29,7 @@ node *stump(int value)
     return temp;
 }
 
-node *searchInsert(node *root,int value)
+node *searchInsert(node *root,int value) // вставка элемента
 {
     int size=0;
     node *temp = root;
@@ -71,7 +71,7 @@ node *searchInsert(node *root,int value)
         max_size=size;
     return leaf;
 }
-int pred_max(node *root)
+int pred_max(node *root) //предмаксимум
     {
         int pr_max;
         node *temp = root;
@@ -112,7 +112,7 @@ int pred_max(node *root)
         }
         return pr_max;
     }
-void poshli(node* root) {
+void poshli(node* root) {  //вывод элементов по возростанию
     node*temp=root;
     if (temp) {
         poshli(temp->pLeft);
@@ -120,7 +120,7 @@ void poshli(node* root) {
         poshli(temp->pRight);
     }
 }
-void i_am_leaf ( node *root)
+void i_am_leaf ( node *root) //вывод листьев
 {
     node *temp = root;
     if (temp) {
@@ -130,7 +130,7 @@ void i_am_leaf ( node *root)
          i_am_leaf(temp->pRight);
     }
 }
-void i_am_not_a_leaf( node *root)
+void i_am_not_a_leaf( node *root)  //вывод ячеек с двумя детьми
 {
     node *temp = root;
     if (temp) {
@@ -140,7 +140,7 @@ void i_am_not_a_leaf( node *root)
          i_am_not_a_leaf(temp->pRight);
     }
 }
-void i_am_branch(node * root)
+void i_am_branch(node * root) // вывод ячеек ТОЛЬКО с одинм ребенком
 {
     node * temp = root;
     if (temp)
@@ -152,7 +152,7 @@ void i_am_branch(node * root)
     }
 }
 
-int check_height(node *root)
+int check_height(node *root) //функция для проверки баланса
 {
     node *temp=root;
     if (!temp)
@@ -169,14 +169,14 @@ int check_height(node *root)
     else
         return max(right_child_height,left_child_height)+1;
 }
-void is_balance(node *root)
+void is_balance(node *root) //проверка на баланс
 {
     if (check_height(root) == -1)
         cout<<"NO"<<endl;
     else
         cout<<"YES"<<endl;
 }
-void frequence(node *root)
+void frequence(node *root) //частота
 {
     node * temp = root;
     if (temp)
