@@ -5,14 +5,15 @@ fr0m=['Макс','Данила','Саша Т.','Альнур','Назар','Де
 t0=['Макс','Данила','Саша Т.','Альнур','Назар','Денис','Максим','Настя','Даша','Полина','Глеб','Андрей','Маша','Алёна','Миша Л.','Надя','Нина','Егор','Лёша','Саша']
 size=len(fr0m)
 const=size
-for i in range(const):
+print(const)
+for i in range(size):
     j=0
     a=random.choice(fr0m)
     b=random.choice(t0)
     while a==b:
         a=random.choice(fr0m)
         b=random.choice(t0)
-    print(a,"----->",b)
+    print("{}: {} -----> {}".format(i+1,a,b))
     for j in range(size):
         if f==1:
             if a==fr0m[j]:
@@ -25,3 +26,4 @@ for i in range(const):
     size-=1
     f=1
     g=1
+    
