@@ -12,7 +12,7 @@ int main()
     int sl=string1.length(),ssl=substring.length();
     int  i,j;
 //    cout<<sl<<endl;;a
-    int  shift[26];
+    int  shift[26]; //только строчные латинские буквы
     for (i = 0; i < 26; i ++)
         shift[i] = ssl;
   /*  for (int i=0; i<26; i++)
