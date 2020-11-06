@@ -13,8 +13,8 @@ table='' #имя таблицы
 wb = load_workbook(table)
 sheet = wb.get_sheet_by_name('Лист1')
 
-
-for i in range(0,3):
+n=3 #число человек
+for i in range(0,n):
     passwords.append(sheet['E'+str(2+i)].value)
     logins.append(sheet['C'+str(2+i)].value)
     ids.append(sheet['F'+str(2+i)].value)
@@ -25,7 +25,7 @@ print(logins)
 id=''
 counter=0
 
-for i in range(0, 3):
+for i in range(0, len(passwords)):
     id=str(ids[i]);
     p=str(passwords[i])
     l=str(logins[i])
@@ -35,5 +35,5 @@ for i in range(0, 3):
     if response.status_code==200:
         counter+=1
     time.sleep(0.25)
-print('скрипт закончил работу, результат '+str(counter)+'/11')
+print('скрипт закончил работу, результат '+str(counter)+'//'len(passwords))
 #print(response.status_code)
